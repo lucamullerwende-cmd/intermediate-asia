@@ -2651,3 +2651,78 @@ img { max-width: 100%; height: auto; display: block; }
   opacity: 0.22;
   user-select: none;
 }
+
+
+/* ═══════════════════════════════════════════════════════════
+   REGULATORY NOTICE
+   Sits beside the investor-introductions copy. It has to read
+   as a notice rather than as more marketing, so it carries a
+   rule, a tinted ground and a label — and deliberately does
+   not inherit the lede rail or figure styling the prose uses.
+   ═══════════════════════════════════════════════════════════ */
+
+.notice {
+  margin-top: clamp(32px, 4vw, 52px);
+  padding: clamp(24px, 2.8vw, 34px) clamp(22px, 2.8vw, 36px);
+  border-radius: 10px;
+  border-left: 3px solid var(--color-primary);
+  background-color: #f1f6f6;
+  background-image:
+    var(--grain),
+    linear-gradient(160deg, #f4f8f8 0%, #edf3f3 100%);
+  background-size: 180px 180px, cover;
+  box-shadow: inset 0 0 0 1px rgba(0, 128, 128, 0.12);
+}
+
+.notice-title {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+}
+
+.notice p {
+  font-size: 0.9375rem;
+  line-height: 1.78;
+  color: var(--color-body);
+  max-width: 78ch;
+}
+.notice p + p { margin-top: 12px; }
+
+/* The grid columns hold one paragraph each; the revised investor
+   block runs to two. */
+.feature-item p + p { margin-top: 14px; }
+
+
+/* ─── FOOTER REGULATORY NOTICE ─────────────────────────────
+   Small type above the copyright line, on every page. Long,
+   so it gets its own row rather than competing with the
+   links for space. */
+.footer-reg {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  /* matches the padding on .footer-below-inner so the notice lines up
+     with the copyright row rather than sitting proud of it */
+  padding: 20px var(--section-pad-h);
+  font-size: 0.75rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+.footer-reg a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer-reg a:hover, .footer-reg a:focus-visible { color: var(--color-text); }
+
+.footer-entity {
+  margin-top: 14px;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
